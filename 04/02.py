@@ -11,10 +11,10 @@ for full_card in data:
     card1, card2 = cards.split('|')
     num_of_matches.append(len(set(map(int, card1.split())) & set(map(int, card2.split()))))
 
+
 for index,num in enumerate(num_of_matches,1):
-    for _ in range(scratchcards[index]):
-        for i in range(index+1, index+num+1):
-            scratchcards[i] += 1
+    for i in range(index+1, index+num+1):
+        scratchcards[i] += scratchcards[index]
 
 
 print(sum(scratchcards.values()))
