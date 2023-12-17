@@ -33,4 +33,4 @@ for key in keys:
 
 print(nums)
 
-print(math.lcm(17141, 16579, 18827, 12083, 13207, 22199))
+print(math.lcm(*nums))
